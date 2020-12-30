@@ -1,17 +1,22 @@
+import React from 'react'
 import Head from 'next/head'
-import CardBack from '../components/cardBack'
 
-export default function Home() {
+import { Container, CardContainer } from '../styles/pages/index'
+import CardBack from '../components/cardBack'
+import CardFront from '../components/cardFront'
+
+export default function Home () {
   return (
-    <>
+    <Container>
       <Head>
-        <title>Create Next App</title>
+        <title>DnD Magic Item Card</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main>
+      <CardContainer>
+        <CardFront />
         <CardBack />
-      </main>
-    </>
+      </CardContainer>
+    </Container>
   )
 }

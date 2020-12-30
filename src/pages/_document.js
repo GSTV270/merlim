@@ -1,5 +1,4 @@
 
-
 import React from 'react'
 import Document, {
   Html,
@@ -10,7 +9,7 @@ import Document, {
 import { ServerStyleSheet } from 'styled-components'
 
 export default class MyDocument extends Document {
-  static async getInitialProps(ctx) {
+  static async getInitialProps (ctx) {
     const sheet = new ServerStyleSheet()
     const originalRenderPage = ctx.renderPage
 
@@ -35,7 +34,7 @@ export default class MyDocument extends Document {
     }
   }
 
-  render() {
+  render () {
     return (
       <Html lang="pt">
         <Head>

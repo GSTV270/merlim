@@ -1,14 +1,13 @@
-import NextImage from 'next/image'
 import styled from 'styled-components'
 
-import pageBackground from '../../../assets/page-background.jpg'
+import pageBackground from '../../../../assets/page-background.jpg'
 
 export const CardContainer = styled.div`
   height: 500px;
   width: 300px;
-  background: url(${pageBackground});
-  background-size: cover;
+  background: #d02b36;
   border: 10px solid #d02b36;
+  border-bottom: 5px solid #d02b36;
   border-radius: 10px;
 
   display: flex;
@@ -26,7 +25,9 @@ export const HeaderTitle = styled.section`
   text-align: center;
   font-size: 20px;
   padding: 2px 0;
-  border-bottom: 2px solid #d02b36;
+  background: url(${pageBackground});
+  background-size: cover;
+  border-radius: 5px 5px 0 0;
 
   strong {
     margin: 5px 0;
@@ -40,22 +41,20 @@ export const HeaderDescription = styled.section`
   font-weight: 600;
   background: #d02b36;
   color: #fff;
-  padding-bottom: 4px;
+  padding: 4px 0;
 `
 
 export const Body = styled.div`
   position: relative;
   height: 100%;
   padding: 5px 10px;
-`
-
-export const Image = styled(NextImage)`
-  position: absolute;
-  left: 0;
-  bottom: 0;
+  border-radius: 0 0 5px 5px;
+  background: url(${pageBackground});
+  background-size: cover;
 `
 
 export const Footer = styled.footer`
+  padding-top: 4px;
   font-size: 18px;
   font-weight: 600;
   color: #fff;

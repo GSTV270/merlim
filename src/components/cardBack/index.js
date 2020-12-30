@@ -1,16 +1,14 @@
-import React from 'react';
+import React from 'react'
 import {
   Header,
   HeaderTitle,
   HeaderDescription,
   Body,
-  Image,
   Footer,
   CardContainer
-} from './styles'
-import dndLogo from '../../../assets/dnd-logo.png'
+} from '../../styles/components/cardBack'
 
-const Card = () => {
+const CardBack = () => {
   return (
     <CardContainer>
       <Header>
@@ -27,20 +25,12 @@ const Card = () => {
         Awesome magic crossbow!
         Awesome magic crossbow!
         Awesome magic crossbow!
-
-        <Image
-          src={dndLogo}
-          alt="Dungeons and Dragons logo"
-          height={50}
-          width={50}
-          layout=""
-        />
       </Body>
       <Footer>
-        <strong>Crossbow</strong>        
+        <strong>Crossbow</strong>
       </Footer>
     </CardContainer>
   )
 }
 
-export default Card;
+export default CardBack
