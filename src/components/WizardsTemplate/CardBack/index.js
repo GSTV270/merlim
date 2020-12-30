@@ -6,9 +6,9 @@ import {
   Body,
   Footer,
   CardContainer
-} from '../../styles/components/cardBack'
+} from '../../../styles/components/WizardsTemplate/CardBack'
 
-const CardBack = () => {
+const WizardsCardBack = () => {
   return (
     <CardContainer>
       <Header>
@@ -33,4 +33,4 @@ const CardBack = () => {
   )
 }
 
-export default CardBack
+export default WizardsCardBack

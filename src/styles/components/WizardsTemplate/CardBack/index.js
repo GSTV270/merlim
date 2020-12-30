@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-import pageBackground from '../../../../assets/page-background.jpg'
+import pageBackground from '../../../../../assets/page-background.jpg'
 
 export const CardContainer = styled.div`
   height: 500px;

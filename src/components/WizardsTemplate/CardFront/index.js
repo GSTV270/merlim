@@ -5,10 +5,10 @@ import {
   Picture,
   Title,
   CardContainer
-} from '../../styles/components/cardFront'
-import dndLogo from '../../../assets/dnd-logo.png'
+} from '../../../styles/components/WizardsTemplate/CardFront'
+import dndLogo from '../../../../assets/dnd-logo.png'
 
-const CardFront = () => {
+const WizardsCardFront = () => {
   return (
     <CardContainer>
       <Header>
@@ -28,4 +28,4 @@ const CardFront = () => {
   )
 }
 
-export default CardFront
+export default WizardsCardFront
