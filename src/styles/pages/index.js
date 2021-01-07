@@ -6,11 +6,18 @@ export const Container = styled.div`
   margin: 0 auto;
 `
 
-export const CardContainer = styled.div`
-  width: 100%;
-  max-width: 700px;
-  margin: 0 auto;
-  
+export const Content = styled.div`
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+`
+
+export const CardSelector = styled.div`
+  margin: 0 auto 30px;
+  width: 320px;
+
+  button {
+    width: 160px;
+    height: 30px;
+  }
 `

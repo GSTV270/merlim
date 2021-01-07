@@ -1,12 +1,18 @@
-import React from 'react'
+import React, { useState, useMemo } from 'react'
 import Head from 'next/head'
 
-import { Container, CardContainer } from '../styles/pages/index'
-import CardBack from '../components/WizardsTemplate/CardBack'
-import CardFront from '../components/WizardsTemplate/CardFront'
-import CustomCard from '../components/CustomTemplate/index'
+import { Container, Content, CardSelector } from '../styles/pages/index'
+import WizardsTemplate from '../components/WizardsTemplate'
+import CustomTemplate from '../components/CustomTemplate'
 
 export default function Home () {
+  const [selectedModel, setSelectedModel] = useState('WIZARDS');
+
+  const cardsDictionary = useMemo(() => ({
+    WIZARDS: <WizardsTemplate />,
+    CUSTOM: <CustomTemplate />,
+  }))
+
   return (
     <Container>
       <Head>
@@ -14,13 +20,16 @@ export default function Home () {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <CardContainer>
-        <CardFront />
-        <CardBack />
-      </CardContainer>
-      <CardContainer>
-        <CustomCard />
-      </CardContainer>
+      <Content>
+        <h1>Merlim`s Magic Items</h1>
+
+        <CardSelector>
+          <button onClick={() => setSelectedModel('WIZARDS')}>Wizard's Template</button>
+          <button onClick={() => setSelectedModel('CUSTOM')}>Custom Template</button>
+        </CardSelector>
+
+        {cardsDictionary[selectedModel]}
+      </Content>
     </Container>
   )
 }
