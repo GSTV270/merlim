@@ -19,5 +19,6 @@ export const CardSelector = styled.div`
   button {
     width: 160px;
     height: 30px;
+    cursor: pointer;
   }
 `

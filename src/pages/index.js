@@ -6,11 +6,11 @@ import WizardsTemplate from '../components/WizardsTemplate'
 import CustomTemplate from '../components/CustomTemplate'
 
 export default function Home () {
-  const [selectedModel, setSelectedModel] = useState('WIZARDS');
+  const [selectedModel, setSelectedModel] = useState('WIZARDS')
 
   const cardsDictionary = useMemo(() => ({
     WIZARDS: <WizardsTemplate />,
-    CUSTOM: <CustomTemplate />,
+    CUSTOM: <CustomTemplate />
   }))
 
   return (
@@ -21,10 +21,10 @@ export default function Home () {
       </Head>
 
       <Content>
-        <h1>Merlim`s Magic Items</h1>
+        <h1>Merlim&apos;s Magic Items</h1>
 
         <CardSelector>
-          <button onClick={() => setSelectedModel('WIZARDS')}>Wizard's Template</button>
+          <button onClick={() => setSelectedModel('WIZARDS')}>Wizard&apos;s Template</button>
           <button onClick={() => setSelectedModel('CUSTOM')}>Custom Template</button>
         </CardSelector>
 

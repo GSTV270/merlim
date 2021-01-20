@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import {
   Header,
   Body,
@@ -8,7 +9,7 @@ import {
 } from '../../../styles/components/WizardsTemplate/CardFront'
 import dndLogo from '../../../../assets/dnd-logo.png'
 
-const WizardsCardFront = () => {
+const WizardsCardFront = ({ name }) => {
   return (
     <CardContainer>
       <Header>
@@ -21,11 +22,15 @@ const WizardsCardFront = () => {
           />
         </Picture>
         <Title>
-          <strong>Crossbow</strong>
+          <strong>{name}</strong>
         </Title>
       </Body>
     </CardContainer>
   )
+}
+
+WizardsCardFront.propTypes = {
+  name: PropTypes.string.isRequired
 }
 
 export default WizardsCardFront

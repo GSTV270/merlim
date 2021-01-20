@@ -42,6 +42,7 @@ export const HeaderDescription = styled.section`
   background: #d02b36;
   color: #fff;
   padding: 4px 0;
+  word-wrap: break-word;
 `
 
 export const Body = styled.div`
@@ -51,6 +52,7 @@ export const Body = styled.div`
   border-radius: 0 0 5px 5px;
   background: url(${pageBackground});
   background-size: cover;
+  word-wrap: break-word;
 `
 
 export const Footer = styled.footer`

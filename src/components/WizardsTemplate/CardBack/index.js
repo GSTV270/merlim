@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import {
   Header,
   HeaderTitle,
@@ -8,29 +9,32 @@ import {
   CardContainer
 } from '../../../styles/components/WizardsTemplate/CardBack'
 
-const WizardsCardBack = () => {
+const WizardsCardBack = ({ name, shortDescription, description, type }) => {
   return (
     <CardContainer>
       <Header>
         <HeaderTitle>
-          <strong>Margic crossbow</strong>
+          <strong>{name}</strong>
         </HeaderTitle>
         <HeaderDescription>
-          Awesome magic crossbow!
+          {shortDescription}
         </HeaderDescription>
       </Header>
       <Body>
-        Awesome magic crossbow!
-        Awesome magic crossbow!
-        Awesome magic crossbow!
-        Awesome magic crossbow!
-        Awesome magic crossbow!
+        {description}
       </Body>
       <Footer>
-        <strong>Crossbow</strong>
+        <strong>{type}</strong>
       </Footer>
     </CardContainer>
   )
+}
+
+WizardsCardBack.propTypes = {
+  name: PropTypes.string.isRequired,
+  shortDescription: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  type: PropTypes.string.isRequired
 }
 
 export default WizardsCardBack
